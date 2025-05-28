@@ -968,7 +968,7 @@ export class Viewer extends EventDispatcher {
       console.log(e);
     }
 
-    let node = new Object3D();
+    let node = new THREE.Object3D();
     node.boundingBox = box;
 
     this.zoomTo(node, factor, animationDuration);
