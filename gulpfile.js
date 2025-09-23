@@ -126,11 +126,11 @@ gulp.task('workers_gulp_concat', async function (done) {
     gulp
       .src(workers[workerName])
       .pipe(concat(`${workerName}.js`))
-      .pipe(gulp.dest('../../apps/web/public/potree/workers'));
+      .pipe(gulp.dest('build/potree/workers'));
   }
   gulp
     .src('./libs/copc/laz-perf.wasm')
-    .pipe(gulp.dest('../../apps/web/public/potree/workers'));
+    .pipe(gulp.dest('build/potree/workers'));
   done();
 });
 
@@ -140,8 +140,16 @@ gulp.task('lazylibs_copy', async function (done) {
     const libpath = lazyLibs[libname];
     gulp
       .src([`${libpath}/**/*`])
-      .pipe(gulp.dest(`../../apps/web/public/potree/lazylibs/${libname}`));
+      .pipe(gulp.dest(`build/potree/lazylibs/${libname}`));
   }
+  done();
+});
+
+// Copiar todas las librerías manteniendo la estructura
+gulp.task('libs_copy', async function (done) {
+  gulp
+    .src(['libs/**/*'])
+    .pipe(gulp.dest('build/potree/libs'));
   done();
 });
 
@@ -163,6 +171,7 @@ gulp.task(
     gulp.parallel(
       'workers_gulp_concat',
       'lazylibs_copy',
+      'libs_copy',
       'icons_viewer',
       'examples_page',
       'shaders', // Si aún usas la tarea de Gulp para generar shaders.js antes de Rollup
@@ -170,7 +179,7 @@ gulp.task(
     'rollup_build', // Rollup se ejecuta DESPUÉS de que Gulp haya preparado todo lo que necesita.
     async function (done) {
       // Tareas de copia que Rollup no hace, o si quieres mantenerlas aquí.
-      gulp.src(paths.html).pipe(gulp.dest('../../apps/web/public/potree'));
+      gulp.src(paths.html).pipe(gulp.dest('build/potree'));
       // `resources` y `LICENSE` ya están copiados por Rollup en la nueva config.
       done();
     },
