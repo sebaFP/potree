@@ -1,0 +1,50 @@
+
+> potree@1.8.0 build C:\BSM\Programacion\smart-control\packages\potree
+> gulp build
+
+[[90m12:16:09[39m] Using gulpfile C:\BSM\Programacion\smart-control\packages\potree\gulpfile.js
+[[90m12:16:09[39m] Starting 'build'...
+[[90m12:16:09[39m] Starting 'workers_gulp_concat'...
+[[90m12:16:09[39m] Starting 'lazylibs_copy'...
+[[90m12:16:09[39m] Starting 'libs_copy'...
+[[90m12:16:09[39m] Starting 'icons_viewer'...
+[[90m12:16:09[39m] Starting 'examples_page'...
+[[90m12:16:09[39m] Starting 'shaders'...
+[[90m12:16:09[39m] Finished 'workers_gulp_concat' after 10 ms
+[[90m12:16:09[39m] Finished 'lazylibs_copy' after 13 ms
+[[90m12:16:09[39m] Finished 'libs_copy' after 13 ms
+[[90m12:16:09[39m] Finished 'icons_viewer' after 15 ms
+created resources/icons/index.html
+[[90m12:16:09[39m] Finished 'examples_page' after 48 ms
+(node:36504) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+created examples/page.html
+created examples/github.html
+Shaders generated at: ./build/shaders/shaders.js
+[[90m12:16:09[39m] Finished 'shaders' after 96 ms
+[[90m12:16:09[39m] Starting 'rollup_build'...
+[[90m12:16:09[39m] Finished 'rollup_build' after 35 ms
+[[90m12:16:09[39m] Starting '<anonymous>'...
+[[90m12:16:09[39m] Finished '<anonymous>' after 824 μs
+[[90m12:16:09[39m] Finished 'build' after 133 ms
+
+[36m
+[1msrc/Potree.js[22m → [1mbuild/potree/potree.js[22m...[39m
+(node:15848) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/BSM/Programacion/smart-control/packages/potree/rollup.config.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\BSM\Programacion\smart-control\packages\potree\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[1m[33m(!) Circular dependencies[39m[22m
+src/utils.js -> src/utils/Profile.js -> src/utils.js
+src/utils.js -> src/utils/Measure.js -> src/utils.js
+[32mcreated [1mbuild/potree/potree.js[22m in [1m2.6s[22m[39m
+[36m
+[1msrc/workers/BinaryDecoderWorker.js[22m → [1mbuild/potree/workers/BinaryDecoderWorker.js[22m...[39m
+[32mcreated [1mbuild/potree/workers/BinaryDecoderWorker.js[22m in [1m14ms[22m[39m
+[36m
+[1msrc/modules/loader/2.0/DecoderWorker.js[22m → [1mbuild/potree/workers/2.0/DecoderWorker.js[22m...[39m
+[32mcreated [1mbuild/potree/workers/2.0/DecoderWorker.js[22m in [1m8ms[22m[39m
+[36m
+[1msrc/modules/loader/2.0/DecoderWorker_brotli.js[22m → [1mbuild/potree/workers/2.0/DecoderWorker_brotli.js[22m...[39m
+[32mcreated [1mbuild/potree/workers/2.0/DecoderWorker_brotli.js[22m in [1m46ms[22m[39m
+
