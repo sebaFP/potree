@@ -59,7 +59,7 @@ export default [
     // Aunque para bibliotecas que exponen muchos módulos, a veces es mejor false.
     treeshake: true, // Intenta con true
     output: {
-      file: '../public/potree/potree.js',
+      file: '../../apps/web/public/potree/potree.js',
       // format: 'esm', // ¡Cambio clave a ESM!
       // No necesitamos 'name' para ESM si no es una librería global.
       format: 'umd', // ¡Cambio clave a ESM!
@@ -83,10 +83,11 @@ export default [
       // injectShadersPlugin(), // Si lo integras directamente en Rollup
       copy({
         targets: [
-          { src: 'src/viewer/sidebar.html', dest: '../public/potree' },
-          { src: 'src/viewer/profile.html', dest: '../public/potree' },
-          { src: 'resources/**/*', dest: '../public/potree/resources' },
-          { src: 'LICENSE', dest: '../public/potree' },
+          { src: 'src/viewer/sidebar.html', dest: '../../apps/web/public/potree' },
+          { src: 'src/viewer/profile.html', dest: '../../apps/web/public/potree' },
+          { src: 'resources/**/*', dest: '../../apps/web/public/potree/resources' },
+          { src: 'libs/**/*', dest: '../../apps/web/public/potree/libs' },
+          { src: 'LICENSE', dest: '../../apps/web/public/potree' },
           // Los workers y lazyLibs son más complejos; los manejaremos con Gulp o Rollup por separado.
           // O podrías configurarlos como entradas separadas de Rollup para que también sean ESM.
         ],
@@ -98,7 +99,7 @@ export default [
   {
     input: 'src/workers/BinaryDecoderWorker.js',
     output: {
-      file: '../public/potree/workers/BinaryDecoderWorker.js',
+      file: '../../apps/web/public/potree/workers/BinaryDecoderWorker.js',
       format: 'es',
       sourcemap: false,
     },
@@ -106,7 +107,7 @@ export default [
   {
     input: 'src/modules/loader/2.0/DecoderWorker.js',
     output: {
-      file: '../public/potree/workers/2.0/DecoderWorker.js',
+      file: '../../apps/web/public/potree/workers/2.0/DecoderWorker.js',
       format: 'es',
       sourcemap: false,
     },
@@ -114,7 +115,7 @@ export default [
   {
     input: 'src/modules/loader/2.0/DecoderWorker_brotli.js',
     output: {
-      file: '../public/potree/workers/2.0/DecoderWorker_brotli.js',
+      file: '../../apps/web/public/potree/workers/2.0/DecoderWorker_brotli.js',
       format: 'es',
       sourcemap: false,
     },

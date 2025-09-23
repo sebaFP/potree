@@ -126,11 +126,11 @@ gulp.task('workers_gulp_concat', async function (done) {
     gulp
       .src(workers[workerName])
       .pipe(concat(`${workerName}.js`))
-      .pipe(gulp.dest('build/potree/workers'));
+      .pipe(gulp.dest('../../apps/web/public/potree/workers'));
   }
   gulp
     .src('./libs/copc/laz-perf.wasm')
-    .pipe(gulp.dest('./build/potree/workers'));
+    .pipe(gulp.dest('../../apps/web/public/potree/workers'));
   done();
 });
 
@@ -140,7 +140,7 @@ gulp.task('lazylibs_copy', async function (done) {
     const libpath = lazyLibs[libname];
     gulp
       .src([`${libpath}/**/*`])
-      .pipe(gulp.dest(`build/potree/lazylibs/${libname}`));
+      .pipe(gulp.dest(`../../apps/web/public/potree/lazylibs/${libname}`));
   }
   done();
 });
@@ -170,7 +170,7 @@ gulp.task(
     'rollup_build', // Rollup se ejecuta DESPUÉS de que Gulp haya preparado todo lo que necesita.
     async function (done) {
       // Tareas de copia que Rollup no hace, o si quieres mantenerlas aquí.
-      gulp.src(paths.html).pipe(gulp.dest('build/potree'));
+      gulp.src(paths.html).pipe(gulp.dest('../../apps/web/public/potree'));
       // `resources` y `LICENSE` ya están copiados por Rollup en la nueva config.
       done();
     },
