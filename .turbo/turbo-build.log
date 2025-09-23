@@ -1,50 +1,56 @@
-
-> potree@1.8.0 build C:\BSM\Programacion\smart-control\packages\potree
-> gulp build
-
-[[90m14:57:18[39m] Using gulpfile C:\BSM\Programacion\smart-control\packages\potree\gulpfile.js
-[[90m14:57:18[39m] Starting 'build'...
-[[90m14:57:18[39m] Starting 'workers_gulp_concat'...
-[[90m14:57:18[39m] Starting 'lazylibs_copy'...
-[[90m14:57:18[39m] Starting 'libs_copy'...
-[[90m14:57:18[39m] Starting 'icons_viewer'...
-[[90m14:57:18[39m] Starting 'examples_page'...
-[[90m14:57:18[39m] Starting 'shaders'...
-[[90m14:57:18[39m] Finished 'workers_gulp_concat' after 7.42 ms
-[[90m14:57:18[39m] Finished 'lazylibs_copy' after 8.57 ms
-[[90m14:57:18[39m] Finished 'libs_copy' after 9.22 ms
-[[90m14:57:18[39m] Finished 'icons_viewer' after 11 ms
+[?9001h[?1004h[?25l[2J[m[2;1H> potree@1.8.0 build C:\BSM\Programacion\smart-control\packages\potree
+> gulp build[5;1H]0;C:\WINDOWS\system32\cmd.exe[?25h]0;gulp build[[90m15:55:59[m] Using gulpfile [35mC:\BSM\Programacion\smart-control\packages\potree\gulpfile.js[m
+[[90m15:55:59[m] Starting '[36mbuild[m'...
+[[90m15:55:59[m] Starting '[36mworkers_gulp_concat[m'...
+[[90m15:55:59[m] Starting '[36mlazylibs_copy[m'...
+[[90m15:55:59[m] Starting '[36mlibs_copy[m'...
+[[90m15:55:59[m] Starting '[36micons_viewer[m'...
+[[90m15:55:59[m] Starting '[36mexamples_page[m'...
+[[90m15:55:59[m] Starting '[36mshaders[m'...
+[[90m15:55:59[m] Finished '[36mworkers_gulp_concat[m' after [35m9.32 ms[m
+[[90m15:55:59[m] Finished '[36mlazylibs_copy[m' after [35m11 ms[K[m
+[[90m15:55:59[m] Finished '[36mlibs_copy[m' after [35m12 ms[K[m
+[[90m15:55:59[m] Finished '[36micons_viewer[m' after [35m14 ms[K[m
 created resources/icons/index.html
-[[90m14:57:18[39m] Finished 'examples_page' after 40 ms
-(node:61404) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
-(Use `node --trace-deprecation ...` to show where the warning was created)
-created examples/github.html
+[[90m15:55:59[m] Finished '[36mexamples_page[m' after [35m41 ms[K[m
+(node:28304) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated
+[13;77Hd.
+(Use `node --trace-deprecation ...` to show where the warning was created)   
 created examples/page.html
+created examples/github.html
 Shaders generated at: ./build/shaders/shaders.js
-[[90m14:57:18[39m] Finished 'shaders' after 75 ms
-[[90m14:57:18[39m] Starting 'rollup_build'...
-[[90m14:57:18[39m] Finished 'rollup_build' after 26 ms
-[[90m14:57:18[39m] Starting '<anonymous>'...
-[[90m14:57:18[39m] Finished '<anonymous>' after 751 μs
-[[90m14:57:18[39m] Finished 'build' after 103 ms
+[[90m15:56:00[m] Finished '[36mshaders[m' after [35m84 ms[m
+[[90m15:56:00[m] Starting '[36mrollup_build[m'...[K
+[[90m15:56:00[m] Finished '[36mrollup_build[m' after [35m36 ms[m
+[[90m15:56:00[m] Starting '[36m<anonymous>[m'...[K
+[[90m15:56:00[m] Finished '[36m<anonymous>[m' after [35m894 μs[K[m
+[[90m15:56:00[m] Finished '[36mbuild[m' after [35m124 ms[K[m
 
-[36m
-[1msrc/Potree.js[22m → [1mbuild/potree/potree.js[22m...[39m
-(node:52404) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/BSM/Programacion/smart-control/packages/potree/rollup.config.js is not specified and it doesn't parse as CommonJS.
-Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
-To eliminate this warning, add "type": "module" to C:\BSM\Programacion\smart-control\packages\potree\package.json.
-(Use `node --trace-warnings ...` to show where the warning was created)
-[1m[33m(!) Circular dependencies[39m[22m
+
+[36m[1msrc/Potree.js[22m → [1mbuild/potree/potree.js[22m...[K[m
+(node:31520) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C
+[13;77HC:/BSM/Programacion/smart-control/packages/potree/rollup.config.js is not spec
+[13;77Hcified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a perf
+[13;77Hformance overhead.
+To eliminate this warning, add "type": "module" to C:\BSM\Programacion\smart-
+[13;77H-control\packages\potree\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)      
+[33m[1m(!) Circular dependencies[m[K
 src/utils.js -> src/utils/Profile.js -> src/utils.js
 src/utils.js -> src/utils/Measure.js -> src/utils.js
-[32mcreated [1mbuild/potree/potree.js[22m in [1m2s[22m[39m
-[36m
-[1msrc/workers/BinaryDecoderWorker.js[22m → [1mbuild/potree/workers/BinaryDecoderWorker.js[22m...[39m
-[32mcreated [1mbuild/potree/workers/BinaryDecoderWorker.js[22m in [1m10ms[22m[39m
-[36m
-[1msrc/modules/loader/2.0/DecoderWorker.js[22m → [1mbuild/potree/workers/2.0/DecoderWorker.js[22m...[39m
-[32mcreated [1mbuild/potree/workers/2.0/DecoderWorker.js[22m in [1m12ms[22m[39m
-[36m
-[1msrc/modules/loader/2.0/DecoderWorker_brotli.js[22m → [1mbuild/potree/workers/2.0/DecoderWorker_brotli.js[22m...[39m
-[32mcreated [1mbuild/potree/workers/2.0/DecoderWorker_brotli.js[22m in [1m30ms[22m[39m
+[32mcreated [1mbuild/potree/potree.js[22m in [1m2.5s[m[K
 
+[36m[1msrc/workers/BinaryDecoderWorker.js[22m → [1mbuild/potree/workers/BinaryDecoderWorker[m
+[36m[1m[13;77Hr.js[22m...[K[m
+[32mcreated [1mbuild/potree/workers/BinaryDecoderWorker.js[22m in [1m23ms[m[K
+
+[36m[1msrc/modules/loader/2.0/DecoderWorker.js[22m → [1mbuild/potree/workers/2.0/DecoderWor[m
+[36m[1m[13;77Hrker.js[22m...[K[m
+[32mcreated [1mbuild/potree/workers/2.0/DecoderWorker.js[22m in [1m8ms[m[K
+
+[36m[1msrc/modules/loader/2.0/DecoderWorker_brotli.js[22m → [1mbuild/potree/workers/2.0/Dec[m
+[36m[1m[13;77HcoderWorker_brotli.js[22m...[K[m
+[32mcreated [1mbuild/potree/workers/2.0/DecoderWorker_brotli.js[22m in [1m43ms[m[K
+
+[?9001l[?1004l
